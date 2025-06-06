@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comfort Food Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button {
+      background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <h1 style="color: beige; font-size: 100px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4">CALM</h1>
+
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+    <!-- Turmeric Milk -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/736x/3f/e3/6b/3fe36b033df85b708a87d14e0e397d0f.jpg" class="card-img-top" alt="Turmeric Milk">
+        <div class="card-body">
+          <h5 class="recipe-title">Turmeric Milk</h5>
+          <p class="card-text">A warm and healing drink made with turmeric, milk, and a touch of sweetness.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('turmeric')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/fAmtDzOirig?si=bwNS6XLnC0icY2ia" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="turmeric" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup milk</li>
+              <li>½ tsp turmeric powder</li>
+              <li>Pinch of black pepper</li>
+              <li>1 tsp honey or jaggery</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Heat milk with turmeric and pepper.</li>
+              <li>Simmer for 3–5 minutes.</li>
+              <li>Strain and sweeten with honey.</li>
+              <li>Serve warm.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast and Tea -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/736x/39/7f/44/397f44d7ca358a0af59b45553a31cf89.jpg" class="card-img-top" alt="Toast and Tea">
+        <div class="card-body">
+          <h5 class="recipe-title">Toast + Tea</h5>
+          <p class="card-text">Simple toasted bread with butter paired with a soothing cup of tea.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('toast')">CHECK RECIPE</button>
+            <a href="https://youtube.com/shorts/6DCRQ0wx1tg?si=MyW6teJILSIFeR7C" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="toast" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>2 slices bread</li>
+              <li>Butter</li>
+              <li>Your preferred tea</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Toast the bread and spread butter.</li>
+              <li>Prepare tea as per preference.</li>
+              <li>Enjoy together warm.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ghee-Topped Rice -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/736x/b7/30/05/b73005d597ff29c15d912729d1161d2e.jpg" class="card-img-top" alt="Ghee Topped Rice">
+        <div class="card-body">
+          <h5 class="recipe-title">Ghee Topped Rice</h5>
+          <p class="card-text">Plain rice drizzled with golden ghee – minimal, calming, and delicious.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('gheerice')">CHECK RECIPE</button>
+            <a href="https://youtu.be/kGr_4Zmn_tY?si=sulcgsQBBqEXYUVk" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="gheerice" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup cooked rice</li>
+              <li>1 tbsp ghee</li>
+              <li>Salt to taste</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Cook rice and plate it.</li>
+              <li>Drizzle hot ghee over it.</li>
+              <li>Sprinkle a pinch of salt and serve.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Veggie Daliya -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/736x/97/f0/aa/97f0aa896049f3329314b267821d73ac.jpg" class="card-img-top" alt="Veggie Daliya">
+        <div class="card-body">
+          <h5 class="recipe-title">Veggie Daliya</h5>
+          <p class="card-text">Wholesome broken wheat porridge cooked with colorful vegetables and spices.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('daliya')">CHECK RECIPE</button>
+            <a href="https://youtu.be/n4UyBHS1wsk?si=ruCwSEuSj_Oj83xS" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="daliya" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>½ cup daliya (broken wheat)</li>
+              <li>Mixed vegetables (carrot, beans, peas)</li>
+              <li>1 tsp cumin seeds</li>
+              <li>1 tsp oil/ghee, salt, water</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Sauté cumin and veggies in oil.</li>
+              <li>Add daliya and roast lightly.</li>
+              <li>Add water and salt, cook until soft.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upma -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/736x/d1/a3/44/d1a344e9e5e88387cffeab3deea23409.jpg" class="card-img-top" alt="Upma">
+        <div class="card-body">
+          <h5 class="recipe-title">Upma</h5>
+          <p class="card-text">A savory South Indian breakfast made from semolina and tempered spices.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('upma')">CHECK RECIPE</button>
+            <a href="https://youtu.be/cAoYsLXUKGI?si=wC6Ul1Xi_e3a_pQs" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="upma" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>½ cup rava (semolina)</li>
+              <li>Mustard seeds, urad dal</li>
+              <li>Curry leaves, green chili</li>
+              <li>Chopped veggies, salt, water</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Roast rava, keep aside.</li>
+              <li>Temper spices and veggies.</li>
+              <li>Add water, bring to boil.</li>
+              <li>Add rava, cook until fluffy.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sweet Potato Coconut Curry -->
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/736x/47/5c/b3/475cb342ea0e7f914a85a131c68b139f.jpg" class="card-img-top" alt="Sweet Potato Curry">
+        <div class="card-body">
+          <h5 class="recipe-title">Sweet Potato Coconut Curry</h5>
+          <p class="card-text">Sweet potatoes simmered in a creamy coconut-based gravy with gentle spices.</p>
+          <div style="display: flex; gap: 10px;">
+            <button onclick="showRecipe('curry')">CHECK RECIPE</button>
+            <a href="https://youtu.be/sUrbXX_kU7g?si=V2dI5O8Nds8Ea_ud" target="_blank">
+              <button>RECIPE VIDEO</button>
+            </a>
+          </div>
+          <div id="curry" class="recipe" style="display: none; margin-top: 20px;">
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              <li>2 sweet potatoes (cubed)</li>
+              <li>1 cup coconut milk</li>
+              <li>1 tsp curry powder</li>
+              <li>1 onion, 1 garlic clove</li>
+              <li>Salt, oil</li>
+            </ul>
+            <p><strong>Steps:</strong></p>
+            <ol>
+              <li>Sauté onion and garlic.</li>
+              <li>Add sweet potatoes and spices.</li>
+              <li>Pour coconut milk and simmer.</li>
+              <li>Cook till potatoes are tender.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function showRecipe(id) {
+    const allRecipes = document.querySelectorAll('.recipe');
+    allRecipes.forEach(div => div.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Celebration Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button {
+      background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+      margin: 5px 0;
+    }
+    .recipe {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 style="color: beige;font-size: 100px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4">CELEBRATION</h1>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <!-- Cards will be inserted here by script -->
+
+    </div>
+  </div>
+
+  <script>
+    const recipes = [
+      {
+        id: "paneer",
+        title: "Paneer Butter Masala",
+        image: "https://i.pinimg.com/736x/0d/a8/92/0da8922b83852e4fb9076aec7ab37352.jpg",
+        description: "A rich, creamy, and mildly spiced tomato-based curry made with paneer cubes. A comfort food favorite!",
+        video: "https://youtu.be/bUounn_Bmy4?si=JjgRC4xugWIoyLo_",
+        ingredients: ["200g paneer cubes", "1 cup tomato puree", "2 tbsp butter", "1 tbsp cream", "1 tsp ginger-garlic paste", "1 tsp garam masala", "1 tsp red chili powder", "Salt to taste"],
+        steps: ["Heat butter in a pan, sauté ginger-garlic paste.", "Add tomato puree and cook until oil separates.", "Add spices and cook for 2 more mins.", "Add paneer cubes and simmer for 5 mins.", "Stir in cream, garnish with coriander. Serve hot!"]
+      },
+      {
+        id: "truffle",
+        title: "Chocolate Truffle Cake",
+        image: "https://i.pinimg.com/736x/8d/fc/f3/8dfcf3fdeb933c9c43e587fb0a16739d.jpg",
+        description: "An indulgent, rich, and moist chocolate cake layered with ganache and topped with chocolate truffles.",
+        video: "https://youtu.be/4LUWESkn2fM?si=xuN6VBLbrgQ2VIZe",
+        ingredients: ["1 cup flour", "½ cup cocoa powder", "½ cup sugar", "½ cup oil", "½ cup milk", "1 tsp baking soda", "Ganache: cream + dark chocolate"],
+        steps: ["Mix dry ingredients and wet ingredients separately, then combine.", "Bake at 180°C for 30 mins.", "Cool and layer with ganache.", "Top with truffles or chocolate shavings."]
+      },
+      {
+        id: "kabab",
+        title: "Crispy Veg Kabab",
+        image: "https://i.pinimg.com/736x/79/30/43/793043c14fa3f53e0e307e5be99266f3.jpg",
+        description: "Spiced and shallow-fried patties made with mashed veggies and lentils. A perfect tea-time snack.",
+        video: "https://youtu.be/JTWDwvm9L3Q?si=Fakzgd0O2iQ78wEV",
+        ingredients: ["1 cup boiled mixed vegetables", "½ cup boiled potatoes", "¼ cup bread crumbs", "1 tsp garam masala", "Salt and chili powder to taste", "Oil for frying"],
+        steps: ["Mash all ingredients together to form dough.", "Shape into small patties.", "Shallow fry until golden and crispy.", "Serve hot with chutney."]
+      },
+      {
+        id: "cheesecake",
+        title: "Classic Cheesecake",
+        image: "https://i.pinimg.com/736x/44/3f/2c/443f2c9e6c5d2753a093512a11279e5f.jpg",
+        description: "A smooth and creamy dessert made with cream cheese on a biscuit base. Baked or chilled, it's always a delight!",
+        video: "https://youtube.com/shorts/V59qaaGMyXg?si=8iqIHedVP5GjS5fM",
+        ingredients: ["1 cup crushed biscuits", "2 tbsp melted butter", "1 cup cream cheese", "½ cup sugar", "½ cup cream", "1 tsp vanilla extract"],
+        steps: ["Mix crushed biscuits with butter and press into a pan.", "Beat cream cheese, sugar, cream, and vanilla.", "Pour over crust and bake/chill until set.", "Top with berries or sauce and serve."]
+      },
+      {
+        id: "chole",
+        title: "Chole Bhature",
+        image: "https://i.pinimg.com/736x/f5/9c/9a/f59c9a7f63c2cd4bd587f3de73f184a4.jpg",
+        description: "A popular North Indian combo of spicy chickpea curry served with deep-fried fluffy bhature. A weekend favorite!",
+        video: "https://youtube.com/shorts/xpWtCOYMgQk?si=2SrCr0erTENnLn57",
+        ingredients: ["1 cup soaked chickpeas", "2 onions, 2 tomatoes", "1 tbsp chole masala", "1 tsp ginger-garlic paste", "Oil, salt, spices", "Bhature: flour, curd, baking soda"],
+        steps: ["Boil chickpeas and cook masala with onions and tomatoes.", "Add chole masala, chickpeas, and simmer.", "For bhature, knead dough and let it rest.", "Roll and deep fry till puffed."]
+      },
+      {
+        id: "jamun",
+        title: "Gulab Jamun",
+        image: "https://i.pinimg.com/736x/41/77/92/4177920dbd75f39879704d84f9458473.jpg",
+        description: "Soft, deep-fried milk-solid balls soaked in rose-scented sugar syrup. A dessert classic.",
+        video: "https://youtu.be/QFvd7u_YjVk?si=IBJd2sECPQ_eczca",
+        ingredients: ["1 cup khoya (milk solids)", "2 tbsp maida", "¼ tsp baking soda", "Ghee for frying", "For syrup: 1 cup sugar, 1 cup water, cardamom, rose water"],
+        steps: ["Knead khoya, maida, soda into soft dough.", "Form small balls and deep fry on low heat.", "Prepare sugar syrup and soak fried balls in warm syrup.", "Let rest 1–2 hours before serving."]
+      }
+    ];
+
+    const container = document.querySelector(".row");
+
+    recipes.forEach(r => {
+      const col = document.createElement("div");
+      col.className = "col";
+      col.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <img src="${r.image}" class="card-img-top" alt="${r.title}">
+          <div class="card-body">
+            <h5 class="recipe-title">${r.title}</h5>
+            <p class="card-text">${r.description}</p>
+            <button onclick="document.getElementById('${r.id}').style.display='block'">CHECK RECIPE</button>
+            <a href="${r.video}" target="_blank"><button>RECIPE VIDEO</button></a>
+            <div id="${r.id}" class="recipe mt-3" style="display: none;">
+              <p><strong>Ingredients:</strong></p>
+              <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+              <p><strong>Steps:</strong></p>
+              <ol>${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+            </div>
+          </div>
+        </div>
+      `;
+      container.appendChild(col);
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

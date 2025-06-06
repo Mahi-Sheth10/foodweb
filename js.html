@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <input id="input" type="text">
+        <button onclick="addTask()">
+        Add Task
+        </button>
+        <ol id="taskList">
+            <li>Task1</li>
+            <li>Task2</li>
+            <li>Task3</li>
+        </ol>
+        
+        <script>
+            const taskElem = document.getElementById('taskList');
+            const input = document.getElementById('input')
+            console.log(taskElem);
+            function addTask() {
+                // create a li tag
+                const liTag = document.createElement('li'); //<li></li>
+                liTag.innerText = input.value;
+                console.log(liTag);
+                taskElem.appendChild(liTag);
+            }
+        </script>
+    </body>
+</html>

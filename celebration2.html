@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Healthy Food Recipes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #00050a;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/736x/70/93/b0/7093b0f6895d246587bf4a7afacb79f3.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .recipe-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    button{
+        background-color: #011c39;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(3, 1, 45, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 style="color: beige;font-size: 100px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mb-4" >CELEBRATION</h1>
+    
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+<div class="col">
+  <div class="card h-100 shadow-sm">
+    <img src="https://i.pinimg.com/736x/0d/a8/92/0da8922b83852e4fb9076aec7ab37352.jpg" class="card-img-top" alt="Paneer Butter Masala">
+    <div class="card-body">
+      <h5 class="recipe-title">Paneer Butter Masala</h5>
+      <p class="card-text">A rich, creamy, and mildly spiced tomato-based curry made with paneer cubes. A comfort food favorite!</p>
+      <div class="food-suggestion">
+        <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+      </div>
+      <div class="food-suggestion">
+        <a href="https://youtube.com/shorts/FhZ776MPG08?si=zjuGSb0ii0dpj389" target="_blank">
+        <button>RECIPE VIDEO</button>
+        </a>
+      </div>
+    </div>
+      <div id="paneer" class="recipe" style="display: none; margin-top: 20px;">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>200g paneer cubes</li>
+          <li>1 cup tomato puree</li>
+          <li>2 tbsp butter</li>
+          <li>1 tbsp cream</li>
+          <li>1 tsp ginger-garlic paste</li>
+          <li>1 tsp garam masala</li>
+          <li>1 tsp red chili powder</li>
+          <li>Salt to taste</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Heat butter in a pan, sauté ginger-garlic paste.</li>
+          <li>Add tomato puree and cook until oil separates.</li>
+          <li>Add spices and cook for 2 more mins.</li>
+          <li>Add paneer cubes and simmer for 5 mins.</li>
+          <li>Stir in cream, garnish with coriander. Serve hot!</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm">
+    <img src="https://i.pinimg.com/736x/3b/65/ef/3b65eff126a8a00782c16998a27dcab9.jpg" class="card-img-top" alt="Tomato soup">
+    <div class="card-body">
+      <h5 class="recipe-title">Tomato Soup</h5>
+      <p class="card-text">A classic comfort soup made with ripe tomatoes, herbs, and a dash of cream..</p>
+      <div class="food-suggestion">
+        <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+      </div>
+      <div class="food-suggestion">
+        <a href="https://youtube.com/shorts/LwksxC5OXF0?si=vSG6y-asKSzvzvop" target="_blank">
+        <button>RECIPE VIDEO</button>
+        </a>
+      </div>
+    </div>
+      <div id="tomato" class="recipe" style="display: none; margin-top: 20px;">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>1 cup flour</li>
+          <li>½ cup cocoa powder</li>
+          <li>½ cup sugar</li>
+          <li>½ cup oil</li>
+          <li>½ cup milk</li>
+          <li>1 tsp baking soda</li>
+          <li>Ganache: cream + dark chocolate</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Mix dry ingredients and wet ingredients separately, then combine.</li>
+          <li>Bake at 180°C for 30 mins.</li>
+          <li>Cool and layer with ganache.</li>
+          <li>Top with truffles or chocolate shavings.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm">
+    <img src="https://i.pinimg.com/736x/d9/de/6f/d9de6f911c1b6e91272b37fed309afaf.jpg" class="card-img-top" alt="Potato Wedges">
+    <div class="card-body">
+      <h5 class="recipe-title">Potato Wedges</h5>
+      <p class="card-text">Golden-baked potato wedges seasoned to perfection. Crispy outside, fluffy inside!</p>
+      <div class="food-suggestion">
+        <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+      </div>
+      <div class="food-suggestion">
+        <a href="https://youtube.com/shorts/5BRDZTWBgQ0?si=Ni1F6y4At9M6qcLG" target="_blank">
+        <button>RECIPE VIDEO</button>
+        </a>
+      </div>
+    </div>
+      <div id="potato wedges" class="recipe" style="display: none; margin-top: 20px;">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>1 cup boiled mixed vegetables</li>
+          <li>½ cup boiled potatoes</li>
+          <li>¼ cup bread crumbs</li>
+          <li>1 tsp garam masala</li>
+          <li>Salt and chili powder to taste</li>
+          <li>Oil for frying</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Mash all ingredients together to form dough.</li>
+          <li>Shape into small patties.</li>
+          <li>Shallow fry until golden and crispy.</li>
+          <li>Serve hot with chutney.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm">
+    <img src="https://i.pinimg.com/736x/85/3f/2d/853f2dc30eb72a8e601c5d57dfebc227.jpg" class="card-img-top" alt="Hot choco">
+    <div class="card-body">
+      <h5 class="recipe-title">Hot Chocolate</h5>
+      <p class="card-text">Creamy, dreamy hot cocoa made with real chocolate—pure winter bliss in a mug!</p>
+      <div class="food-suggestion">
+        <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+      </div>
+      <div class="food-suggestion">
+        <a href="https://youtube.com/shorts/tkTl2dBqmQY?si=5txNffUkqrmBXJCM" target="_blank">
+        <button>RECIPE VIDEO</button>
+        </a>
+      </div>
+    </div>
+      <div id="Hot choco" class="recipe" style="display: none; margin-top: 20px;">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>1 cup crushed biscuits</li>
+          <li>2 tbsp melted butter</li>
+          <li>1 cup cream cheese</li>
+          <li>½ cup sugar</li>
+          <li>½ cup cream</li>
+          <li>1 tsp vanilla extract</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Mix crushed biscuits with butter and press into a pan.</li>
+          <li>Beat cream cheese, sugar, cream, and vanilla.</li>
+          <li>Pour over crust and bake/chill until set.</li>
+          <li>Top with berries or sauce and serve.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm">
+    <img src="" class="card-img-top" alt="Chole Bhature">
+    <div class="card-body">
+      <h5 class="recipe-title">Chole Bhature</h5>
+      <p class="card-text">A popular North Indian combo of spicy chickpea curry served with deep-fried fluffy bhature. A weekend favorite!</p>
+      <div class="food-suggestion">
+        <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+      </div>
+      <div class="food-suggestion">
+        <a href="https://youtube.com/shorts/FhZ776MPG08?si=zjuGSb0ii0dpj389" target="_blank">
+        <button>RECIPE VIDEO</button>
+        </a>
+      </div>
+    </div>
+      <div id="chole" class="recipe" style="display: none; margin-top: 20px;">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>1 cup soaked chickpeas</li>
+          <li>2 onions, 2 tomatoes</li>
+          <li>1 tbsp chole masala</li>
+          <li>1 tsp ginger-garlic paste</li>
+          <li>Oil, salt, spices</li>
+          <li>Bhature: flour, curd, baking soda</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Boil chickpeas and cook masala with onions and tomatoes.</li>
+          <li>Add chole masala, chickpeas, and simmer.</li>
+          <li>For bhature, knead dough and let it rest.</li>
+          <li>Roll and deep fry till puffed.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100 shadow-sm">
+    <img src="https://i.pinimg.com/736x/41/77/92/4177920dbd75f39879704d84f9458473.jpg" class="card-img-top" alt="Gulab Jamun">
+    <div class="card-body">
+      <h5 class="recipe-title">Gulab Jamun</h5>
+      <p class="card-text">Soft, deep-fried milk-solid balls soaked in rose-scented sugar syrup. A dessert classic.</p>
+      <div class="food-suggestion">
+        <button onclick="showRecipe('chai')">CHECK RECIPE</button>
+      </div>
+      <div class="food-suggestion">
+        <a href="https://youtube.com/shorts/FhZ776MPG08?si=zjuGSb0ii0dpj389" target="_blank">
+        <button>RECIPE VIDEO</button>
+        </a>
+      </div>
+    </div>
+      <div id="jamun" class="recipe" style="display: none; margin-top: 20px;">
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          <li>1 cup khoya (milk solids)</li>
+          <li>2 tbsp maida</li>
+          <li>¼ tsp baking soda</li>
+          <li>Ghee for frying</li>
+          <li>For syrup: 1 cup sugar, 1 cup water, cardamom, rose water</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Knead khoya, maida, soda into soft dough.</li>
+          <li>Form small balls and deep fry on low heat.</li>
+          <li>Prepare sugar syrup and soak fried balls in warm syrup.</li>
+          <li>Let rest 1–2 hours before serving.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
